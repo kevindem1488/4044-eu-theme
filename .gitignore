@@ -1,0 +1,17 @@
+.DS_Store
+.git
+.gitignore
+node_modules/
+*.log
+*.zip
+.env
+.env.local
+config.local.php
+wp-config.php
+*.pem
+*.key
+.vscode/
+.idea/
+Thumbs.db
+dist/
+build/
