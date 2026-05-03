@@ -1,0 +1,294 @@
+/**
+ * Responsive CSS for 4044.eu Theme
+ */
+
+/* Tablet Devices (768px and below) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        display: none !important;
+        width: 100%;
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    nav.active {
+        display: flex !important;
+    }
+
+    nav a {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav a::after {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex !important;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .sports-table {
+        font-size: 0.85rem;
+    }
+
+    .sports-table th,
+    .sports-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .sports-title {
+        font-size: 1.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .article-card {
+        margin-bottom: 1rem;
+    }
+
+    .match-score {
+        font-size: 1.25rem;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+    }
+
+    .logo-subtitle {
+        font-size: 0.6rem;
+    }
+
+    h1, .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    h2, .sports-title {
+        font-size: 1.35rem;
+    }
+
+    main {
+        padding: 0.75rem;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .articles-grid {
+        gap: 1rem;
+    }
+
+    .article-card {
+        border-radius: 4px;
+    }
+
+    .article-image {
+        height: 150px;
+    }
+
+    .article-content {
+        padding: 1rem;
+    }
+
+    .article-title {
+        font-size: 1.1rem;
+    }
+
+    .article-excerpt {
+        font-size: 0.9rem;
+    }
+
+    .sports-table {
+        font-size: 0.75rem;
+    }
+
+    .sports-table th,
+    .sports-table td {
+        padding: 0.5rem 0.3rem;
+    }
+
+    .match-status {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .match-score {
+        font-size: 1rem;
+    }
+
+    .match-team {
+        font-size: 0.9rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1rem;
+    }
+
+    .footer-section a {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        gap: 0.5rem;
+    }
+
+    .social-links a {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .live-indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .article-category {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .article-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small devices (320px and below) */
+@media (max-width: 320px) {
+    .logo {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .article-title {
+        font-size: 1rem;
+    }
+
+    .sports-table {
+        font-size: 0.7rem;
+    }
+
+    .match-score {
+        font-size: 0.9rem;
+    }
+}
+
+/* Landscape orientation (tablets) */
+@media (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 0.5rem 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header, footer, nav, .sidebar {
+        display: none;
+    }
+
+    main {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .article-card {
+        page-break-inside: avoid;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+
+    .article-card,
+    .sports-section {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .sports-table th {
+        background: linear-gradient(135deg, #1a1a1a, #0066cc);
+    }
+
+    .sports-table tbody tr:hover {
+        background-color: rgba(0, 102, 204, 0.1);
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
