@@ -1,0 +1,16 @@
+{
+  "name": "4044-eu-theme",
+  "description": "Professional WordPress theme for live news, sports results, and AI-generated content from Europe",
+  "version": "1.0.0",
+  "author": "kevindem1488",
+  "license": "GPL-2.0+",
+  "keywords": ["news", "sports", "live-updates", "ai-generated", "europe", "responsive"],
+  "requires": {
+    "wordpress": ">=6.0",
+    "php": ">=8.0"
+  },
+  "api-keys": {
+    "football-data": "https://www.football-data.org/",
+    "openai": "https://platform.openai.com/"
+  }
+}
